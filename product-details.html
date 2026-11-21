@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | NOVA Enterprise Commerce</title>
+  <meta name="description" content="View high-resolution images, technical specifications, enterprise certifications, and customer reviews for NOVA hardware solutions." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nova-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="NOVA Enterprise Home">
+        <div class="brand-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <span>NOVA<span class="highlight">.</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="style-guide.html" class="nav-link" style="color:var(--color-primary);">Design System</a>
+      </nav>
+      <div class="navbar-actions">
+        <button type="button" class="action-icon-btn btn-search-trigger" title="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+        <button type="button" class="action-icon-btn btn-wishlist-trigger" title="Wishlist"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="badge-count badge-wishlist-count" style="display:none;">0</span></button>
+        <button type="button" class="action-icon-btn btn-cart-trigger" title="Cart"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="badge-count badge-cart-count" style="display:none;">0</span></button>
+        <button type="button" class="action-icon-btn theme-toggle-btn" title="Theme"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></button>
+        <a href="login.html" class="btn btn-secondary btn-sm" style="display:none; @media(min-width:768px){display:inline-flex;}">Portal</a>
+        <button type="button" class="action-icon-btn mobile-menu-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo"><div class="brand-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><span>NOVA<span class="highlight">.</span></span></a>
+      <button type="button" class="mobile-nav-close action-icon-btn">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Enterprise Services</a>
+      <a href="products.html" class="mobile-nav-link">Products & Architecture</a>
+      <a href="shop.html" class="mobile-nav-link active">Digital Storefront</a>
+      <a href="contact.html" class="mobile-nav-link">Global Contact</a>
+      <a href="login.html" class="mobile-nav-link">Client Portal</a>
+    </div>
+  </aside>
+
+  <main id="pdetail-container">
+    <!-- Breadcrumb -->
+    <div style="background:var(--bg-surface); border-bottom:1px solid var(--border-color); padding:16px 0;">
+      <div class="container">
+        <div style="font-size:0.85rem; color:var(--text-muted);">
+          <a href="index.html">Home</a> &rsaquo; <a href="shop.html">Shop</a> &rsaquo; <span id="pdetail-breadcrumb-name">Product Name</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Detail Section -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="product-details-grid">
+          <!-- Gallery Column -->
+          <div>
+            <div class="product-gallery-main">
+              <img id="pdetail-main-img" src="" alt="Product Main" />
+            </div>
+            <div class="product-gallery-thumbs" id="pdetail-thumbs">
+              <!-- Dynamically populated thumbnails -->
+            </div>
+          </div>
+
+          <!-- Product Buy Info Column -->
+          <div>
+            <div class="pdetail-sku" id="pdetail-sku">SKU: NV-001 • Category: Compute</div>
+            <h1 class="pdetail-title" id="pdetail-title">Nova Quantum Edge AI Server</h1>
+
+            <div class="card-product-rating" style="margin-bottom:16px;">
+              <span class="stars" style="color:var(--color-accent); font-size:1.1rem;">★★★★★</span>
+              <span id="pdetail-rating-text" class="text-muted">(4.9) • 142 enterprise reviews</span>
+            </div>
+
+            <div class="pdetail-price-box">
+              <span class="pdetail-price" id="pdetail-price">$4,999.00</span>
+              <span class="pdetail-orig-price" id="pdetail-orig-price">$5,499.00</span>
+              <span class="badge badge-success">In Stock</span>
+            </div>
+
+            <p id="pdetail-shortdesc" style="font-size:1.05rem; line-height:1.6; margin-bottom:24px; color:var(--text-muted);"></p>
+
+            <!-- Feature Bullets -->
+            <ul id="pdetail-features-list" style="margin-bottom:24px;"></ul>
+
+            <!-- Stock Pill -->
+            <div style="margin-bottom:28px;">
+              <span class="badge badge-primary" id="pdetail-stock" style="font-size:0.85rem; padding:6px 12px;">In Stock: 18 units ready for dispatch</span>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="pdetail-actions-row">
+              <div class="qty-stepper">
+                <button type="button" class="btn-qty" id="pdetail-minus">-</button>
+                <input type="number" id="pdetail-qty" value="1" min="1" readonly />
+                <button type="button" class="btn-qty" id="pdetail-plus">+</button>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-lg" id="pdetail-btn-add-cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                Add to Enterprise Cart
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-lg" id="pdetail-btn-buy-now">
+                Buy Now
+              </button>
+
+              <button type="button" class="floating-action-btn" id="pdetail-btn-wishlist" title="Save to Wishlist">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+
+            <!-- Assurance Badges -->
+            <div style="display:flex; gap:20px; border-top:1px solid var(--border-subtle); padding-top:20px; font-size:0.85rem; color:var(--text-muted);">
+              <span>🛡️ 5-Year Hardware Warranty</span>
+              <span>⚡ Free Priority Freight ($3K+)</span>
+              <span>💼 Net 30 Terms Available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div style="margin-top:50px;">
+          <div class="nova-tabs-nav">
+            <button class="tab-btn active" data-tab="tab-specs">Technical Specifications</button>
+            <button class="tab-btn" data-tab="tab-overview">Full Overview</button>
+            <button class="tab-btn" data-tab="tab-certifications">Certifications & Compliance</button>
+            <button class="tab-btn" data-tab="tab-reviews">Customer Reviews</button>
+          </div>
+
+          <!-- Specs Tab -->
+          <div class="tab-content active" id="tab-specs">
+            <table class="specs-table card" style="width:100%;">
+              <tbody id="pdetail-specs-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Overview Tab -->
+          <div class="tab-content" id="tab-overview">
+            <div class="card" style="padding:32px;">
+              <h3 style="margin-bottom:16px;">Architectural Overview</h3>
+              <p id="pdetail-full-description" style="line-height:1.8; font-size:1.05rem;"></p>
+            </div>
+          </div>
+
+          <!-- Certifications Tab -->
+          <div class="tab-content" id="tab-certifications">
+            <div class="card" style="padding:32px;">
+              <h3 style="margin-bottom:16px;">Enterprise Certifications</h3>
+              <div class="grid grid-cols-3">
+                <div style="background:var(--bg-subtle); border-radius:var(--radius-md); padding:16px;">
+                  <strong style="display:block; margin-bottom:4px;">SOC 2 Type II</strong>
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Audited by top-tier compliance accounting firms for data security and availability.</span>
+                </div>
+                <div style="background:var(--bg-subtle); border-radius:var(--radius-md); padding:16px;">
+                  <strong style="display:block; margin-bottom:4px;">ISO/IEC 27001:2022</strong>
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Certified information security management systems governance across all supply nodes.</span>
+                </div>
+                <div style="background:var(--bg-subtle); border-radius:var(--radius-md); padding:16px;">
+                  <strong style="display:block; margin-bottom:4px;">FIPS 140-3 Level 2</strong>
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Cryptographic modules tested and validated for tamper evidence and zero-trust key isolation.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div class="tab-content" id="tab-reviews">
+            <div class="card" style="padding:32px;">
+              <h3 style="margin-bottom:20px;">Enterprise Peer Reviews</h3>
+              <div style="display:flex; flex-direction:column; gap:20px;">
+                <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:16px;">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                    <strong>Marcus Vance — CTO, Apex Global Financial</strong>
+                    <span style="color:var(--color-accent);">★★★★★</span>
+                  </div>
+                  <p style="font-size:0.92rem; color:var(--text-muted);">"Flawless integration with our Kubernetes clusters. The 100GbE QSFP28 interfaces handled high peak burst traffic without a hiccup."</p>
+                </div>
+                <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:16px;">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                    <strong>Elena Rostova — VP Supply Chain, Nordic Logistics</strong>
+                    <span style="color:var(--color-accent);">★★★★★</span>
+                  </div>
+                  <p style="font-size:0.92rem; color:var(--text-muted);">"Superior build quality. The dual Titanium hot-swappable power supplies provide total peace of mind for our warehouse server rooms."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div style="margin-top:80px;">
+          <h2 style="margin-bottom:24px;">Recommended Enterprise Solutions</h2>
+          <div class="grid grid-cols-3" id="pdetail-related-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nova-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 NOVA Enterprise Technologies Inc. All rights reserved.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="shop.html">Return to Shop</a>
+          <a href="checkout.html">Direct Checkout</a>
+          <a href="contact.html">Global Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>

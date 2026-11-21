@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Checkout & Procurement | NOVA Commerce</title>
+  <meta name="description" content="Secure enterprise checkout supporting corporate purchasing cards, Net 30 invoices, and SWIFT wire transfers with instant confirmation." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nova-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="NOVA Enterprise Home">
+        <div class="brand-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <span>NOVA<span class="highlight">.</span></span>
+      </a>
+      <div style="font-size:0.9rem; font-weight:700; color:var(--color-primary); display:flex; align-items:center; gap:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span>256-Bit SSL Encrypted Procurement</span>
+      </div>
+      <div class="navbar-actions">
+        <button type="button" class="action-icon-btn theme-toggle-btn" title="Theme"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+        <a href="shop.html" class="btn btn-secondary btn-sm">Return to Store</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding:40px 0 80px;">
+    <div class="container">
+
+      <!-- Empty Cart Alert -->
+      <div id="checkout-empty-warning" class="card" style="display:none; text-align:center; padding:60px 20px;">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-muted)" stroke-width="1.5" style="margin:0 auto 16px;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <h3>Your shopping cart is currently empty</h3>
+        <p class="text-muted" style="margin-bottom:20px;">Please select enterprise hardware systems or cloud solutions before proceeding to procurement.</p>
+        <a href="shop.html" class="btn btn-primary">Explore Enterprise Catalog</a>
+      </div>
+
+      <!-- Main Checkout Layout -->
+      <div id="checkout-main-content">
+        <!-- Step Indicators -->
+        <div class="checkout-steps-nav">
+          <div class="checkout-step-item active" data-step="1">
+            <span class="checkout-step-num">1</span>
+            <span>Enterprise Details</span>
+          </div>
+          <div style="flex:1; height:2px; background:var(--border-color); margin:0 16px;"></div>
+          <div class="checkout-step-item" data-step="2">
+            <span class="checkout-step-num">2</span>
+            <span>Payment & Terms</span>
+          </div>
+          <div style="flex:1; height:2px; background:var(--border-color); margin:0 16px;"></div>
+          <div class="checkout-step-item" data-step="3">
+            <span class="checkout-step-num">3</span>
+            <span>Review & Authorize</span>
+          </div>
+        </div>
+
+        <div class="checkout-layout">
+          <!-- Left Wizard Form -->
+          <form id="checkout-wizard-form" class="card" style="padding:32px;">
+            
+            <!-- STEP 1: Enterprise & Shipping Info -->
+            <div class="checkout-step-panel" data-step-panel="1">
+              <h2 style="font-size:1.4rem; margin-bottom:8px;">Enterprise Procurement & Shipping</h2>
+              <p class="text-muted" style="margin-bottom:24px; font-size:0.9rem;">Provide corporate organization details and destination delivery dock.</p>
+
+              <div class="grid grid-cols-2">
+                <div class="form-group">
+                  <label class="form-label" for="chk-company">Enterprise / Organization Name *</label>
+                  <input type="text" id="chk-company" class="form-input" placeholder="e.g. Acme Global Logistics Corp" value="Apex Financial Services Inc" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="chk-taxid">Corporate Tax ID / VAT Number</label>
+                  <input type="text" id="chk-taxid" class="form-input" placeholder="e.g. US-84-920491" value="US-94-382910" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2">
+                <div class="form-group">
+                  <label class="form-label" for="chk-fullname">Procurement Officer Full Name *</label>
+                  <input type="text" id="chk-fullname" class="form-input" placeholder="Full name" value="Marcus Vance" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="chk-email">Corporate Work Email *</label>
+                  <input type="email" id="chk-email" class="form-input" placeholder="m.vance@apexfinancial.com" value="m.vance@apexfinancial.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="chk-address">Receiving Dock / Street Address *</label>
+                <input type="text" id="chk-address" class="form-input" placeholder="500 Tech Highway, Dock Bay 4" value="500 Montgomery Street, Suite 1200" required />
+              </div>
+
+              <div class="grid grid-cols-3">
+                <div class="form-group">
+                  <label class="form-label" for="chk-city">City *</label>
+                  <input type="text" id="chk-city" class="form-input" value="San Francisco" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="chk-country">Country *</label>
+                  <select id="chk-country" class="form-select">
+                    <option value="United States" selected>United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Canada">Canada</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="chk-zip">Postal / Zip Code *</label>
+                  <input type="text" id="chk-zip" class="form-input" value="94111" required />
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:flex-end; margin-top:24px;">
+                <button type="button" id="btn-step1-next" class="btn btn-primary btn-lg">
+                  Continue to Payment &rarr;
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Payment Method & Terms -->
+            <div class="checkout-step-panel" data-step-panel="2" style="display:none;">
+              <h2 style="font-size:1.4rem; margin-bottom:8px;">Payment Authorization Method</h2>
+              <p class="text-muted" style="margin-bottom:24px; font-size:0.9rem;">Select how your procurement department wishes to settle this invoice.</p>
+
+              <!-- Payment Method Radios -->
+              <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:28px;">
+                <label class="card" style="padding:14px; cursor:pointer; display:flex; align-items:center; gap:10px;">
+                  <input type="radio" name="paymentMethod" value="card" checked />
+                  <span style="font-weight:700; font-size:0.9rem;">Credit / Purchasing Card</span>
+                </label>
+                <label class="card" style="padding:14px; cursor:pointer; display:flex; align-items:center; gap:10px;">
+                  <input type="radio" name="paymentMethod" value="invoice" />
+                  <span style="font-weight:700; font-size:0.9rem;">Net 30 Invoicing</span>
+                </label>
+                <label class="card" style="padding:14px; cursor:pointer; display:flex; align-items:center; gap:10px;">
+                  <input type="radio" name="paymentMethod" value="wire" />
+                  <span style="font-weight:700; font-size:0.9rem;">Fedwire / SWIFT</span>
+                </label>
+              </div>
+
+              <!-- Credit Card Section -->
+              <div id="payment-card-section">
+                <!-- Visual Interactive Card Mirror -->
+                <div class="mock-credit-card">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div class="card-chip"></div>
+                    <span style="font-weight:800; font-size:1.1rem; letter-spacing:1px;">NOVA CORP</span>
+                  </div>
+                  <div class="card-num-display" id="mirror-card-num">•••• •••• •••• ••••</div>
+                  <div class="card-holder-exp">
+                    <div>
+                      <span style="font-size:0.65rem; opacity:0.8; display:block;">Cardholder</span>
+                      <strong id="mirror-card-holder">MARCUS VANCE</strong>
+                    </div>
+                    <div>
+                      <span style="font-size:0.65rem; opacity:0.8; display:block;">Expires</span>
+                      <strong id="mirror-card-exp">12/28</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="chk-card-num">Card Number *</label>
+                  <input type="text" id="chk-card-num" class="form-input" placeholder="4242 4242 4242 4242" value="4242 8890 1234 5678" maxlength="19" />
+                </div>
+
+                <div class="grid grid-cols-3">
+                  <div class="form-group" style="grid-column: span 2;">
+                    <label class="form-label" for="chk-card-holder">Name on Card *</label>
+                    <input type="text" id="chk-card-holder" class="form-input" value="Marcus Vance" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="chk-card-exp">Expiry (MM/YY) *</label>
+                    <input type="text" id="chk-card-exp" class="form-input" placeholder="MM/YY" value="12/28" maxlength="5" />
+                  </div>
+                </div>
+
+                <div class="form-group" style="max-width:180px;">
+                  <label class="form-label" for="chk-card-cvv">CVV / CVC Security *</label>
+                  <input type="password" id="chk-card-cvv" class="form-input" placeholder="888" value="888" maxlength="4" />
+                </div>
+              </div>
+
+              <!-- Net 30 Section -->
+              <div id="payment-invoice-section" style="display:none; background:var(--bg-subtle); padding:20px; border-radius:var(--radius-md); margin-bottom:20px;">
+                <h4 style="margin-bottom:8px;">Net 30 Corporate Purchase Order</h4>
+                <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">An official invoice will be dispatched to your accounts payable department. Payment is due within 30 days of hardware delivery.</p>
+                <div class="form-group">
+                  <label class="form-label" for="chk-po-number">Purchase Order (PO) Number</label>
+                  <input type="text" id="chk-po-number" class="form-input" placeholder="PO-2026-90412" value="PO-2026-90412" />
+                </div>
+              </div>
+
+              <!-- Wire Section -->
+              <div id="payment-wire-section" style="display:none; background:var(--bg-subtle); padding:20px; border-radius:var(--radius-md); margin-bottom:20px;">
+                <h4 style="margin-bottom:8px;">SWIFT / Fedwire Direct Clearing</h4>
+                <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">Wire routing instructions and an escrow reservation lock will be sent to your corporate email upon review completion.</p>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; margin-top:24px;">
+                <button type="button" id="btn-step2-prev" class="btn btn-secondary">&larr; Back</button>
+                <button type="button" id="btn-step2-next" class="btn btn-primary btn-lg">Review Order Summary &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Review & Authorize -->
+            <div class="checkout-step-panel" data-step-panel="3" style="display:none;">
+              <h2 style="font-size:1.4rem; margin-bottom:8px;">Review & Authorize Procurement</h2>
+              <p class="text-muted" style="margin-bottom:24px; font-size:0.9rem;">Confirm all enterprise dispatch details before placing your order.</p>
+
+              <div style="background:var(--bg-subtle); border-radius:var(--radius-lg); padding:24px; margin-bottom:28px;">
+                <div style="margin-bottom:16px;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Organization:</span>
+                  <div id="rev-company" style="font-weight:700; font-size:1.05rem;"></div>
+                </div>
+                <div style="margin-bottom:16px;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Procurement Officer:</span>
+                  <div id="rev-contact" style="font-weight:600;"></div>
+                </div>
+                <div style="margin-bottom:16px;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Shipping Address:</span>
+                  <div id="rev-address" style="color:var(--text-main);"></div>
+                </div>
+                <div>
+                  <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-muted);">Payment Method:</span>
+                  <div id="rev-payment" style="font-weight:600; color:var(--color-primary);"></div>
+                </div>
+              </div>
+
+              <div class="form-checkbox" style="margin-bottom:24px;">
+                <input type="checkbox" id="chk-agree" checked required />
+                <label for="chk-agree" style="font-size:0.88rem;">I verify that I am authorized to bind our enterprise to the purchase order and agree to NOVA's Enterprise Master Service Terms.</label>
+              </div>
+
+              <div style="display:flex; justify-content:space-between;">
+                <button type="button" id="btn-step3-prev" class="btn btn-secondary">&larr; Back to Payment</button>
+                <button type="button" id="btn-place-order" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg, var(--color-success) 0%, #059669 100%);">
+                  Authorize & Place Order
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Right Order Summary Column -->
+          <div class="card" style="padding:28px; background:var(--bg-surface);">
+            <h3 style="font-size:1.2rem; margin-bottom:18px;">Order Summary</h3>
+            <div id="checkout-items-summary" style="max-height:280px; overflow-y:auto; margin-bottom:20px;">
+              <!-- Dynamically hydrated items -->
+            </div>
+
+            <!-- Promo input -->
+            <div class="cart-promo-section" style="margin-bottom:20px; border-top:1px solid var(--border-subtle); padding-top:16px;">
+              <div class="promo-input-group">
+                <input type="text" id="chk-promo-input" placeholder="Promo code (SAVE20)" class="form-input form-input-sm" />
+                <button type="button" id="chk-promo-btn" class="btn btn-secondary btn-sm">Apply</button>
+              </div>
+            </div>
+
+            <div class="cart-summary-breakdown" style="margin-bottom:0;">
+              <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="chk-subtotal">$0.00</span>
+              </div>
+              <div class="summary-line text-success" id="chk-discount-row" style="display:none;">
+                <span>Discount:</span>
+                <span id="chk-discount">-$0.00</span>
+              </div>
+              <div class="summary-line">
+                <span>Insured Freight:</span>
+                <span id="chk-shipping">FREE Freight</span>
+              </div>
+              <div class="summary-line">
+                <span>Tax (8.25%):</span>
+                <span id="chk-tax">$0.00</span>
+              </div>
+              <div class="summary-line font-bold summary-total">
+                <span>Total Authorized:</span>
+                <span id="chk-total" class="text-primary">$0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="nova-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 NOVA Enterprise Technologies Inc. All rights reserved.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="shop.html">Return to Shop</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

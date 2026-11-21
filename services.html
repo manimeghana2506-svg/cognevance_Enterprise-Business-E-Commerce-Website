@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Services & ROI Calculator | NOVA Technologies</title>
+  <meta name="description" content="Explore NOVA's enterprise digital services: cloud architecture, private AI inferencing, zero-trust cybersecurity, and calculate your annual ROI." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nova-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="NOVA Enterprise Home">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <span>NOVA<span class="highlight">.</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="style-guide.html" class="nav-link" style="color:var(--color-primary);">Design System</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button type="button" class="action-icon-btn btn-search-trigger" title="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+        <button type="button" class="action-icon-btn btn-wishlist-trigger" title="Wishlist"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="badge-count badge-wishlist-count" style="display:none;">0</span></button>
+        <button type="button" class="action-icon-btn btn-cart-trigger" title="Cart"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="badge-count badge-cart-count" style="display:none;">0</span></button>
+        <button type="button" class="action-icon-btn theme-toggle-btn" title="Theme"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></button>
+        <a href="login.html" class="btn btn-secondary btn-sm" style="display:none; @media(min-width:768px){display:inline-flex;}">Portal</a>
+        <button type="button" class="action-icon-btn mobile-menu-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo"><div class="brand-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><span>NOVA<span class="highlight">.</span></span></a>
+      <button type="button" class="mobile-nav-close action-icon-btn">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link active">Enterprise Services</a>
+      <a href="products.html" class="mobile-nav-link">Products & Architecture</a>
+      <a href="shop.html" class="mobile-nav-link">Digital Storefront</a>
+      <a href="contact.html" class="mobile-nav-link">Global Contact</a>
+      <a href="login.html" class="mobile-nav-link">Client Portal</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="section" style="padding:70px 0 40px; background:radial-gradient(circle at 90% 10%, var(--color-primary-light) 0%, transparent 40%);">
+      <div class="container text-center">
+        <span class="section-eyebrow">Enterprise Capabilities</span>
+        <h1 style="margin-bottom:20px;">Architecting Future-Proof Systems</h1>
+        <p class="lead" style="max-width:720px; margin:0 auto 30px;">
+          From private air-gapped LLM inferencing to automated multi-cloud GitOps and zero-downtime database migrations, NOVA empowers enterprises to outpace competition.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6 SERVICES GRID -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-cols-3">
+          <div class="card" style="padding:32px;">
+            <div class="bento-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg></div>
+            <span class="badge badge-primary" style="margin-bottom:8px;">99.999% SLA</span>
+            <h3 style="margin-bottom:12px;">Cloud Modernization</h3>
+            <p style="margin-bottom:16px;">Transform legacy infrastructure into elastic multi-cloud Kubernetes clusters with automated GitOps pipelines and 35% FinOps savings.</p>
+            <ul style="font-size:0.88rem; color:var(--text-muted); display:flex; flex-direction:column; gap:6px;">
+              <li>✓ Multi-cloud AWS / GCP / Azure</li>
+              <li>✓ Zero-downtime database cutovers</li>
+              <li>✓ Automated Terraform IaaS</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <div class="bento-icon-box" style="background:var(--color-secondary-light); color:var(--color-secondary-hover);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
+            <span class="badge badge-secondary" style="margin-bottom:8px;">Custom Neural Models</span>
+            <h3 style="margin-bottom:12px;">Enterprise AI & Vector RAG</h3>
+            <p style="margin-bottom:16px;">Deploy secure private LLMs and vector search engines over proprietary enterprise documents with strict role-based access control.</p>
+            <ul style="font-size:0.88rem; color:var(--text-muted); display:flex; flex-direction:column; gap:6px;">
+              <li>✓ Air-gapped on-premise inferencing</li>
+              <li>✓ Real-time demand forecasting</li>
+              <li>✓ MLOps pipelines with drift alerts</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <div class="bento-icon-box" style="background:var(--color-success-bg); color:var(--color-success);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <span class="badge badge-success" style="margin-bottom:8px;">SOC 2 & FedRAMP</span>
+            <h3 style="margin-bottom:12px;">Zero-Trust Cyber Shield</h3>
+            <p style="margin-bottom:16px;">Continuous security posture evaluation, automated penetration testing, and zero-trust identity federation across your entire device fleet.</p>
+            <ul style="font-size:0.88rem; color:var(--text-muted); display:flex; flex-direction:column; gap:6px;">
+              <li>✓ 24/7 Managed SOC & Incident Response</li>
+              <li>✓ Quantum-resistant crypto standards</li>
+              <li>✓ Automated SIEM threat playbooks</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <div class="bento-icon-box" style="background:var(--color-warning-bg); color:var(--color-warning);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
+            <span class="badge badge-warning" style="margin-bottom:8px;">High Conversion</span>
+            <h3 style="margin-bottom:12px;">Omnichannel Commerce</h3>
+            <p style="margin-bottom:16px;">Sub-second headless storefronts engineered for global multi-currency transactions, wholesale B2B pricing, and ERP synchronization.</p>
+            <ul style="font-size:0.88rem; color:var(--text-muted); display:flex; flex-direction:column; gap:6px;">
+              <li>✓ Multi-warehouse inventory sync</li>
+              <li>✓ Tiered corporate volume pricing</li>
+              <li>✓ SAP, NetSuite & Salesforce connectors</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <div class="bento-icon-box" style="background:#fce7f3; color:#ec4899;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+            <span class="badge badge-primary" style="margin-bottom:8px;">Edge Computing</span>
+            <h3 style="margin-bottom:12px;">IoT & Smart Automation</h3>
+            <p style="margin-bottom:16px;">Connect factory equipment, logistics fleets, and edge sensors into an intelligent telemetry network with predictive maintenance.</p>
+            <ul style="font-size:0.88rem; color:var(--text-muted); display:flex; flex-direction:column; gap:6px;">
+              <li>✓ Digital twin factory line simulation</li>
+              <li>✓ Supply chain geofencing & alerts</li>
+              <li>✓ Ultra-low latency edge decisioning</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:32px;">
+            <div class="bento-icon-box" style="background:#e0e7ff; color:#4338ca;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg></div>
+            <span class="badge badge-secondary" style="margin-bottom:8px;">15-Min Response</span>
+            <h3 style="margin-bottom:12px;">White-Glove SRE Support</h3>
+            <p style="margin-bottom:16px;">Dedicated senior Site Reliability Engineers standing guard over your mission-critical infrastructure around the clock.</p>
+            <ul style="font-size:0.88rem; color:var(--text-muted); display:flex; flex-direction:column; gap:6px;">
+              <li>✓ Guaranteed 15-minute response SLA</li>
+              <li>✓ Chaos engineering resilience drills</li>
+              <li>✓ Dedicated Technical Account Manager</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ROI CALCULATOR -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Financial Impact Analysis</span>
+          <h2 class="section-title">Interactive Enterprise ROI Calculator</h2>
+          <p class="section-desc">Estimate your annual infrastructure cost savings and latency reduction by migrating to NOVA Edge Compute.</p>
+        </div>
+
+        <div class="roi-calculator-box">
+          <div class="grid grid-cols-2" style="align-items:center;">
+            <div>
+              <div style="margin-bottom:24px;">
+                <label style="display:flex; justify-content:space-between; font-weight:700; margin-bottom:8px;">
+                  <span>Current Annual Cloud Spend:</span>
+                  <span id="roi-spend-val" class="text-primary font-display">$250,000</span>
+                </label>
+                <input type="range" id="roi-spend-slider" min="50000" max="2000000" step="25000" value="250000" class="price-slider" />
+              </div>
+
+              <div style="margin-bottom:24px;">
+                <label style="display:flex; justify-content:space-between; font-weight:700; margin-bottom:8px;">
+                  <span>Peak Transactions / Minute:</span>
+                  <span id="roi-tps-val" class="text-primary font-display">15,000</span>
+                </label>
+                <input type="range" id="roi-tps-slider" min="1000" max="100000" step="1000" value="15000" class="price-slider" />
+              </div>
+
+              <div>
+                <label style="display:flex; justify-content:space-between; font-weight:700; margin-bottom:8px;">
+                  <span>Fleet Size (Servers / Gateways):</span>
+                  <span id="roi-fleet-val" class="text-primary font-display">40 Nodes</span>
+                </label>
+                <input type="range" id="roi-fleet-slider" min="5" max="500" step="5" value="40" class="price-slider" />
+              </div>
+            </div>
+
+            <div class="roi-results-card">
+              <span style="font-size:0.95rem; text-transform:uppercase; letter-spacing:1px; opacity:0.85;">Projected Annual Enterprise Savings</span>
+              <div class="roi-savings-number" id="roi-annual-savings">$87,500</div>
+              <p style="font-size:0.95rem; opacity:0.9; margin-bottom:24px;">Based on a 35% FinOps optimization and ~60% reduction in cloud egress bandwidth fees.</p>
+              <div style="display:flex; justify-content:space-around; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px;">
+                <div>
+                  <strong style="font-size:1.4rem; display:block;" id="roi-latency-drop">64%</strong>
+                  <span style="font-size:0.8rem; opacity:0.8;">Latency Reduction</span>
+                </div>
+                <div>
+                  <strong style="font-size:1.4rem; display:block;" id="roi-payback-time">3.4 Mos</strong>
+                  <span style="font-size:0.8rem; opacity:0.8;">Payback Period</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Enterprise FAQs</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div id="services-faq-list">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>What makes NOVA hardware and services different from commercial consumer tech?</span>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Every NOVA product is engineered specifically for mission-critical commercial deployments: featuring ECC memory, dual redundant hot-swappable power supplies, hardware zero-trust security modules (TPM 2.0 / FIPS 140-3), and guaranteed 5-year availability lifecycle with enterprise SLAs.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Do you offer custom B2B enterprise procurement and invoicing?</span>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Yes. In addition to our instant credit card and digital checkout, we provide Net 30/60 corporate invoicing, volume tier discounting, customized master service agreements (MSAs), and dedicated procurement account managers.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What are your shipping and deployment turnaround times?</span>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <p>Standard in-stock enterprise units ship within 24 to 48 hours with priority insured air freight. Custom rackmount builds and pre-configured server clusters typically deploy within 7 to 10 business days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nova-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 NOVA Enterprise Technologies Inc. All rights reserved.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="contact.html">Global Contact</a>
+          <a href="shop.html">Shop Catalog</a>
+          <a href="style-guide.html">Design System</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // ROI Calculator Interactive Logic
+    const spendSlider = document.getElementById('roi-spend-slider');
+    const tpsSlider = document.getElementById('roi-tps-slider');
+    const fleetSlider = document.getElementById('roi-fleet-slider');
+
+    const spendVal = document.getElementById('roi-spend-val');
+    const tpsVal = document.getElementById('roi-tps-val');
+    const fleetVal = document.getElementById('roi-fleet-val');
+    const savingsEl = document.getElementById('roi-annual-savings');
+
+    function calculateROI() {
+      const spend = parseFloat(spendSlider.value);
+      const tps = parseFloat(tpsSlider.value);
+      const fleet = parseFloat(fleetSlider.value);
+
+      spendVal.textContent = window.formatCurrency(spend);
+      tpsVal.textContent = tps.toLocaleString();
+      fleetVal.textContent = `${fleet} Nodes`;
+
+      // 35% baseline spend savings + efficiency scaling
+      const baseSavings = spend * 0.35;
+      const efficiencyBonus = (fleet * 150) + (tps * 0.12);
+      const totalSavings = baseSavings + efficiencyBonus;
+
+      savingsEl.textContent = window.formatCurrency(totalSavings);
+    }
+
+    spendSlider?.addEventListener('input', calculateROI);
+    tpsSlider?.addEventListener('input', calculateROI);
+    fleetSlider?.addEventListener('input', calculateROI);
+
+    // Accordions
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      item.querySelector('.accordion-header')?.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

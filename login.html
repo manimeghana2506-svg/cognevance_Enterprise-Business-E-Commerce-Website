@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Client Portal & SSO Authentication | NOVA</title>
+  <meta name="description" content="Secure single sign-on access to the NOVA Enterprise Console, tenant cluster provisioning, and hardware telemetry." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- Minimal Header for Portal -->
+  <header class="nova-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="NOVA Enterprise Home">
+        <div class="brand-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <span>NOVA<span class="highlight">.</span></span>
+      </a>
+      <div class="navbar-actions">
+        <button type="button" class="action-icon-btn theme-toggle-btn" title="Theme"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+        <a href="index.html" class="btn btn-secondary btn-sm">&larr; Back to Website</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-split-wrapper">
+    <!-- Left Hero Banner -->
+    <div class="auth-hero-banner">
+      <div>
+        <span class="badge badge-primary" style="margin-bottom:20px; background:rgba(99, 102, 241, 0.25); color:#a5b4fc;">Zero-Trust Console Access</span>
+        <h1 style="color:#fff; font-size:2.6rem; margin-bottom:16px;">Enterprise Command & Telemetry</h1>
+        <p style="color:#94a3b8; font-size:1.05rem; line-height:1.7; max-width:480px;">
+          Manage hardware cluster provisioning, zero-trust cryptographic keys, and headless commerce checkout gateways from a unified enterprise pane.
+        </p>
+      </div>
+
+      <div style="background:rgba(255, 255, 255, 0.05); backdrop-filter:blur(10px); border:1px solid rgba(255, 255, 255, 0.1); border-radius:var(--radius-lg); padding:24px;">
+        <div style="color:var(--color-accent); font-size:1rem; margin-bottom:8px;">★★★★★</div>
+        <p style="font-size:0.92rem; color:#cbd5e1; font-style:italic; line-height:1.6; margin-bottom:12px;">
+          "The NOVA enterprise console gives our SRE team real-time packet-level visibility across 40 edge nodes with sub-second alerting."
+        </p>
+        <span style="font-size:0.8rem; color:#94a3b8; font-weight:600;">Marcus Vance — CTO, Apex Global Financial</span>
+      </div>
+
+      <div style="display:flex; gap:16px; font-size:0.85rem; color:#94a3b8;">
+        <span>🔒 256-Bit TLS 1.3</span>
+        <span>🛡️ FIPS 140-3 Hardware Root</span>
+        <span>📋 SOC 2 Type II Audited</span>
+      </div>
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="auth-form-card" id="auth-form-container">
+      <div class="auth-form-inner">
+        <!-- Dual Tab Switcher -->
+        <div class="auth-tab-buttons">
+          <button type="button" class="auth-tab-btn active" id="tab-btn-login">Sign In</button>
+          <button type="button" class="auth-tab-btn" id="tab-btn-signup">Create Enterprise Account</button>
+        </div>
+
+        <!-- 1. SIGN IN FORM -->
+        <form id="form-login">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Corporate Email Address</label>
+            <input type="email" id="login-email" class="form-input" placeholder="officer@company.com" value="admin@novaenterprise.io" required />
+          </div>
+
+          <div class="form-group">
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+              <label class="form-label" for="login-password" style="margin:0;">Password</label>
+              <a href="#" onclick="showToast('Password reset link dispatched to corporate email.', 'info'); return false;" style="font-size:0.82rem; color:var(--color-primary);">Forgot password?</a>
+            </div>
+            <input type="password" id="login-password" class="form-input" placeholder="••••••••" value="NovaSecure2026!" required />
+          </div>
+
+          <div class="form-checkbox" style="margin-bottom:24px;">
+            <input type="checkbox" id="login-remember" checked />
+            <label for="login-remember">Remember this enterprise workstation for 30 days</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-bottom:24px;">
+            Sign In to Console
+          </button>
+        </form>
+
+        <!-- 2. CREATE ACCOUNT FORM (Hidden by default) -->
+        <form id="form-signup" style="display:none;">
+          <div class="grid grid-cols-2">
+            <div class="form-group">
+              <label class="form-label" for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" class="form-input" placeholder="Jane Doe" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signup-company">Organization</label>
+              <input type="text" id="signup-company" class="form-input" placeholder="Acme Corp" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signup-email">Corporate Email</label>
+            <input type="email" id="signup-email" class="form-input" placeholder="j.doe@acme.com" />
+          </div>
+
+          <div class="form-group">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <label class="form-label" for="signup-password">Master Security Password</label>
+              <span id="pwd-strength-label" style="font-size:0.8rem; font-weight:700;"></span>
+            </div>
+            <input type="password" id="signup-password" class="form-input" placeholder="At least 8 characters..." />
+            <div class="password-strength-bar">
+              <div class="password-strength-fill" id="pwd-strength-meter"></div>
+            </div>
+          </div>
+
+          <div class="form-checkbox" style="margin-bottom:24px;">
+            <input type="checkbox" id="signup-terms" checked />
+            <label for="signup-terms">I agree to the Enterprise Master Subscription Agreement & SLA</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-bottom:24px;">
+            Create Enterprise Account
+          </button>
+        </form>
+
+        <!-- SSO Providers Divider -->
+        <div style="position:relative; text-align:center; margin-bottom:24px;">
+          <div style="position:absolute; top:50%; left:0; right:0; height:1px; background:var(--border-color);"></div>
+          <span style="position:relative; background:var(--bg-surface); padding:0 12px; font-size:0.82rem; color:var(--text-muted); text-transform:uppercase;">Or Single Sign-On (SSO)</span>
+        </div>
+
+        <!-- SSO Buttons -->
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <button type="button" class="btn btn-secondary btn-block btn-sso-provider" data-provider="Google Workspace">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/></svg>
+            Continue with Google Workspace
+          </button>
+
+          <button type="button" class="btn btn-secondary btn-block btn-sso-provider" data-provider="Microsoft Entra">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#F25022" d="M1 1h10v10H1z"/><path fill="#7FBA00" d="M13 1h10v10H13z"/><path fill="#00A4EF" d="M1 13h10v10H1z"/><path fill="#FFB900" d="M13 13h10v10H13z"/></svg>
+            Continue with Microsoft Entra ID
+          </button>
+
+          <button type="button" class="btn btn-secondary btn-block btn-sso-provider" data-provider="Okta Identity">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#007dc1"><circle cx="12" cy="12" r="10"/></svg>
+            Continue with Okta SSO
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
